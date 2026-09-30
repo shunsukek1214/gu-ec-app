@@ -31,6 +31,8 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env
+.env.local
 .env*
 
 # vercel
@@ -39,3 +41,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Next.js
+frontend/node_modules/
+frontend/.next/
