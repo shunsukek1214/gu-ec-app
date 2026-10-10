@@ -102,7 +102,7 @@ def search_products(
     return {"products": results}
 
 
-#商品詳細検索
+#商品詳細
 def get_product_detail(
         db: Session,
         product_id: int,
