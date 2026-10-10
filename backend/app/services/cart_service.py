@@ -86,32 +86,32 @@ def build_cart_response(
                 .first()
             )
 
-    #小計
-    line_total = (
-        product.price * cart_item.quantity
-    )
+        #小計
+        line_total = (
+            product.price * cart_item.quantity
+        )
 
-    subtotal += line_total
+        subtotal += line_total
 
-    cart_items.append(
-        {
-            "cart_item_id": cart_item.cart_item_id,
-            "variant_id": variant.variant_id,
-            "product_id": product.product_id,
-            "product_name": product.name,
-            "price": product.price,
-            "image_url": image.image_url
-            if image
-            else None,
-            "color_id": color.color_id,
-            "color_name": color.color_name,
-            "size_id": size.size_id,
-            "size_name": size.size_name,
-            "quantity": cart_item.quantity,
-            "stock_quantity": variant.stock_quantity,
-            "line_total": line_total,
-        }
-    )
+        cart_items.append(
+            {
+                "cart_item_id": cart_item.cart_item_id,
+                "variant_id": variant.variant_id,
+                "product_id": product.product_id,
+                "product_name": product.name,
+                "price": product.price,
+                "image_url": image.image_url
+                if image
+                else None,
+                "color_id": color.color_id,
+                "color_name": color.color_name,
+                "size_id": size.size_id,
+                "size_name": size.size_name,
+                "quantity": cart_item.quantity,
+                "stock_quantity": variant.stock_quantity,
+                "line_total": line_total,
+            }
+        )
 
     tax = (
         subtotal * TAX_RATE

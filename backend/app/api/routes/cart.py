@@ -53,6 +53,8 @@ def create_cart_item(
     response_model=CartResponse,
 )
 def get_cart(
+    #JWTからログイン中ユーザーのuser_idを取得
+    #フロントからuser_idは受け取らない！
     user_id: int = Depends(
         get_current_user_id
     ),

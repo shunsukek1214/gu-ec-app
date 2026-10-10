@@ -1,0 +1,10 @@
+
+fastapi
+uvicorn
+SQLAlchemy
+PyMySQL
+pydantic-settings
+google-auth
+requests
+PyJWT
+alembic
